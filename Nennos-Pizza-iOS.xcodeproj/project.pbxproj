@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96AE4C302055DAA100266D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4C2F2055DAA100266D34 /* AppDelegate.swift */; };
+		96AE4C322055DAA100266D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4C312055DAA100266D34 /* ViewController.swift */; };
+		96AE4C352055DAA100266D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE4C332055DAA100266D34 /* Main.storyboard */; };
+		96AE4C382055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4C362055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodeld */; };
+		96AE4C3A2055DAA100266D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AE4C392055DAA100266D34 /* Assets.xcassets */; };
+		96AE4C3D2055DAA100266D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE4C3B2055DAA100266D34 /* LaunchScreen.storyboard */; };
+		96AE4C482055DAA200266D34 /* Nennos_Pizza_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4C472055DAA200266D34 /* Nennos_Pizza_iOSTests.swift */; };
+		96AE4C532055DAA200266D34 /* Nennos_Pizza_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4C522055DAA200266D34 /* Nennos_Pizza_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96AE4C442055DAA200266D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96AE4C242055DAA100266D34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96AE4C2B2055DAA100266D34;
+			remoteInfo = "Nennos-Pizza-iOS";
+		};
+		96AE4C4F2055DAA200266D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96AE4C242055DAA100266D34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96AE4C2B2055DAA100266D34;
+			remoteInfo = "Nennos-Pizza-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96AE4C2C2055DAA100266D34 /* Nennos-Pizza-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nennos-Pizza-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AE4C2F2055DAA100266D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96AE4C312055DAA100266D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96AE4C342055DAA100266D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96AE4C372055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nennos_Pizza_iOS.xcdatamodel; sourceTree = "<group>"; };
+		96AE4C392055DAA100266D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96AE4C3C2055DAA100266D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96AE4C3E2055DAA200266D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AE4C432055DAA200266D34 /* Nennos-Pizza-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nennos-Pizza-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AE4C472055DAA200266D34 /* Nennos_Pizza_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nennos_Pizza_iOSTests.swift; sourceTree = "<group>"; };
+		96AE4C492055DAA200266D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AE4C4E2055DAA200266D34 /* Nennos-Pizza-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nennos-Pizza-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AE4C522055DAA200266D34 /* Nennos_Pizza_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nennos_Pizza_iOSUITests.swift; sourceTree = "<group>"; };
+		96AE4C542055DAA200266D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96AE4C292055DAA100266D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C402055DAA200266D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C4B2055DAA200266D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96AE4C232055DAA100266D34 = {
+			isa = PBXGroup;
+			children = (
+				96AE4C2E2055DAA100266D34 /* Nennos-Pizza-iOS */,
+				96AE4C462055DAA200266D34 /* Nennos-Pizza-iOSTests */,
+				96AE4C512055DAA200266D34 /* Nennos-Pizza-iOSUITests */,
+				96AE4C2D2055DAA100266D34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96AE4C2D2055DAA100266D34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96AE4C2C2055DAA100266D34 /* Nennos-Pizza-iOS.app */,
+				96AE4C432055DAA200266D34 /* Nennos-Pizza-iOSTests.xctest */,
+				96AE4C4E2055DAA200266D34 /* Nennos-Pizza-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96AE4C2E2055DAA100266D34 /* Nennos-Pizza-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				96AE4C2F2055DAA100266D34 /* AppDelegate.swift */,
+				96AE4C312055DAA100266D34 /* ViewController.swift */,
+				96AE4C332055DAA100266D34 /* Main.storyboard */,
+				96AE4C392055DAA100266D34 /* Assets.xcassets */,
+				96AE4C3B2055DAA100266D34 /* LaunchScreen.storyboard */,
+				96AE4C3E2055DAA200266D34 /* Info.plist */,
+				96AE4C362055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodeld */,
+			);
+			path = "Nennos-Pizza-iOS";
+			sourceTree = "<group>";
+		};
+		96AE4C462055DAA200266D34 /* Nennos-Pizza-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				96AE4C472055DAA200266D34 /* Nennos_Pizza_iOSTests.swift */,
+				96AE4C492055DAA200266D34 /* Info.plist */,
+			);
+			path = "Nennos-Pizza-iOSTests";
+			sourceTree = "<group>";
+		};
+		96AE4C512055DAA200266D34 /* Nennos-Pizza-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96AE4C522055DAA200266D34 /* Nennos_Pizza_iOSUITests.swift */,
+				96AE4C542055DAA200266D34 /* Info.plist */,
+			);
+			path = "Nennos-Pizza-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96AE4C2B2055DAA100266D34 /* Nennos-Pizza-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AE4C572055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOS" */;
+			buildPhases = (
+				96AE4C282055DAA100266D34 /* Sources */,
+				96AE4C292055DAA100266D34 /* Frameworks */,
+				96AE4C2A2055DAA100266D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nennos-Pizza-iOS";
+			productName = "Nennos-Pizza-iOS";
+			productReference = 96AE4C2C2055DAA100266D34 /* Nennos-Pizza-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96AE4C422055DAA200266D34 /* Nennos-Pizza-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AE4C5A2055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOSTests" */;
+			buildPhases = (
+				96AE4C3F2055DAA200266D34 /* Sources */,
+				96AE4C402055DAA200266D34 /* Frameworks */,
+				96AE4C412055DAA200266D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96AE4C452055DAA200266D34 /* PBXTargetDependency */,
+			);
+			name = "Nennos-Pizza-iOSTests";
+			productName = "Nennos-Pizza-iOSTests";
+			productReference = 96AE4C432055DAA200266D34 /* Nennos-Pizza-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96AE4C4D2055DAA200266D34 /* Nennos-Pizza-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AE4C5D2055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOSUITests" */;
+			buildPhases = (
+				96AE4C4A2055DAA200266D34 /* Sources */,
+				96AE4C4B2055DAA200266D34 /* Frameworks */,
+				96AE4C4C2055DAA200266D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96AE4C502055DAA200266D34 /* PBXTargetDependency */,
+			);
+			name = "Nennos-Pizza-iOSUITests";
+			productName = "Nennos-Pizza-iOSUITests";
+			productReference = 96AE4C4E2055DAA200266D34 /* Nennos-Pizza-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96AE4C242055DAA100266D34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Sebastian Vancea";
+				TargetAttributes = {
+					96AE4C2B2055DAA100266D34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					96AE4C422055DAA200266D34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 96AE4C2B2055DAA100266D34;
+					};
+					96AE4C4D2055DAA200266D34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 96AE4C2B2055DAA100266D34;
+					};
+				};
+			};
+			buildConfigurationList = 96AE4C272055DAA100266D34 /* Build configuration list for PBXProject "Nennos-Pizza-iOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96AE4C232055DAA100266D34;
+			productRefGroup = 96AE4C2D2055DAA100266D34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96AE4C2B2055DAA100266D34 /* Nennos-Pizza-iOS */,
+				96AE4C422055DAA200266D34 /* Nennos-Pizza-iOSTests */,
+				96AE4C4D2055DAA200266D34 /* Nennos-Pizza-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96AE4C2A2055DAA100266D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE4C3D2055DAA100266D34 /* LaunchScreen.storyboard in Resources */,
+				96AE4C3A2055DAA100266D34 /* Assets.xcassets in Resources */,
+				96AE4C352055DAA100266D34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C412055DAA200266D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C4C2055DAA200266D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96AE4C282055DAA100266D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE4C322055DAA100266D34 /* ViewController.swift in Sources */,
+				96AE4C382055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodeld in Sources */,
+				96AE4C302055DAA100266D34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C3F2055DAA200266D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE4C482055DAA200266D34 /* Nennos_Pizza_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE4C4A2055DAA200266D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE4C532055DAA200266D34 /* Nennos_Pizza_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96AE4C452055DAA200266D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96AE4C2B2055DAA100266D34 /* Nennos-Pizza-iOS */;
+			targetProxy = 96AE4C442055DAA200266D34 /* PBXContainerItemProxy */;
+		};
+		96AE4C502055DAA200266D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96AE4C2B2055DAA100266D34 /* Nennos-Pizza-iOS */;
+			targetProxy = 96AE4C4F2055DAA200266D34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96AE4C332055DAA100266D34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96AE4C342055DAA100266D34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96AE4C3B2055DAA100266D34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96AE4C3C2055DAA100266D34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96AE4C552055DAA200266D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96AE4C562055DAA200266D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96AE4C582055DAA200266D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96AE4C592055DAA200266D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		96AE4C5B2055DAA200266D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nennos-Pizza-iOS.app/Nennos-Pizza-iOS";
+			};
+			name = Debug;
+		};
+		96AE4C5C2055DAA200266D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nennos-Pizza-iOS.app/Nennos-Pizza-iOS";
+			};
+			name = Release;
+		};
+		96AE4C5E2055DAA200266D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nennos-Pizza-iOS";
+			};
+			name = Debug;
+		};
+		96AE4C5F2055DAA200266D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC82TKQW73;
+				INFOPLIST_FILE = "Nennos-Pizza-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sebastianvancea.playground.Nennos-Pizza-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nennos-Pizza-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96AE4C272055DAA100266D34 /* Build configuration list for PBXProject "Nennos-Pizza-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE4C552055DAA200266D34 /* Debug */,
+				96AE4C562055DAA200266D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AE4C572055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE4C582055DAA200266D34 /* Debug */,
+				96AE4C592055DAA200266D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AE4C5A2055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE4C5B2055DAA200266D34 /* Debug */,
+				96AE4C5C2055DAA200266D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AE4C5D2055DAA200266D34 /* Build configuration list for PBXNativeTarget "Nennos-Pizza-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE4C5E2055DAA200266D34 /* Debug */,
+				96AE4C5F2055DAA200266D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96AE4C362055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96AE4C372055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodel */,
+			);
+			currentVersion = 96AE4C372055DAA100266D34 /* Nennos_Pizza_iOS.xcdatamodel */;
+			path = Nennos_Pizza_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 96AE4C242055DAA100266D34 /* Project object */;
+}
