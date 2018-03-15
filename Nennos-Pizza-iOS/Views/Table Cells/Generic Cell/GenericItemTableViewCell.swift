@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol GenericCellDelegate {
+    func didPressButton(tag: Int)
+}
+
 class GenericItemTableViewCell: UITableViewCell {
     
     class var cellIdentifier: String { return "GenericCellIdentifier"}
     class var nib: UINib { return UINib(nibName: "GenericItemTableViewCell", bundle: nil) }
     class var height: CGFloat { return 44.0 }
+    
+    var cellDelegate: GenericCellDelegate?
 
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,12 +28,6 @@ class GenericItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         actionButton.isUserInteractionEnabled = false
         actionButton.isHidden = true
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(with name: String, price: Double) {
@@ -54,6 +54,7 @@ class GenericItemTableViewCell: UITableViewCell {
         actionButton.isUserInteractionEnabled = true
     }
     
-    @IBAction func onButtonTouchUpInside(_ sender: Any) {
+    @IBAction func onButtonTouchUpInside(_ sender: UIButton) {
+        cellDelegate?.didPressButton(tag: sender.tag)
     }
 }

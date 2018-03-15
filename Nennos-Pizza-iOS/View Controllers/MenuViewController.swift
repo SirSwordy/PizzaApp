@@ -21,7 +21,7 @@ class MenuViewController: UIViewController {
     let viewModel = MenuViewModel()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         setup()
         viewModel.loadMenu { completed in
             self.activityIndicator.stopAnimating()
@@ -50,8 +50,17 @@ extension MenuViewController {
         if segue.identifier == Constants.Identifiers.Segue.OpenPiza {
             let destination = segue.destination as! PizzaViewController
             let selectedRow = tableView.indexPathForSelectedRow!.row
-            let detailViewModel = PizzaDetailViewModel(pizza: viewModel.pizzas![selectedRow], availableIngredients: viewModel.ingredients!)
+            let pizza = viewModel.pizzas![selectedRow]
+            let detailViewModel = PizzaDetailViewModel(pizza: pizza, availableIngredients: viewModel.ingredients!)
             destination.viewModel = detailViewModel
+            destination.title = pizza.name.uppercased()
+        } else if segue.identifier == Constants.Identifiers.Segue.CreatePiza {
+            let destination = segue.destination as! PizzaViewController
+            //TODO: UX prototype shows 0 but we need a default value, the one from the JSON request
+            let customPizza = Pizza(name: "Pizza", ingredientIds: [], basePrice: 4)
+            let detailViewModel = PizzaDetailViewModel(pizza: customPizza, availableIngredients: viewModel.ingredients!)
+            destination.viewModel = detailViewModel
+            destination.title = "CREATE A PIZZA"
         }
      }
 }

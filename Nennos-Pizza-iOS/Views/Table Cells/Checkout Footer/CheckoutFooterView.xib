@@ -16,6 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hK6-DG-Mkq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-Ee-pzD">
                     <rect key="frame" x="43" y="35" width="157.5" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -29,14 +33,18 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="RqI-6f-Kzc" firstAttribute="leading" secondItem="ioa-Ee-pzD" secondAttribute="trailing" constant="50" id="0CP-EE-esL"/>
+                <constraint firstItem="hK6-DG-Mkq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2BV-rN-VXA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hK6-DG-Mkq" secondAttribute="trailing" id="2n1-ju-ngx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RqI-6f-Kzc" secondAttribute="trailing" constant="12" id="FvB-Lz-7RR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RqI-6f-Kzc" secondAttribute="bottom" constant="12" id="J8D-QS-oDn"/>
                 <constraint firstItem="RqI-6f-Kzc" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="WYW-C8-pNc"/>
+                <constraint firstItem="hK6-DG-Mkq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aKf-aG-v79"/>
                 <constraint firstItem="ioa-Ee-pzD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="43" id="bg6-1J-iAw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ioa-Ee-pzD" secondAttribute="bottom" constant="12" id="fI6-zv-EYZ"/>
+                <constraint firstAttribute="bottom" secondItem="hK6-DG-Mkq" secondAttribute="bottom" id="lYI-RS-PLU"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

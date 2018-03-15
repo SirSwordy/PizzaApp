@@ -34,10 +34,11 @@ extension CartViewController {
     func setup() {
         tableView.register(GenericItemTableViewCell.nib, forCellReuseIdentifier: GenericItemTableViewCell.cellIdentifier)
         tableView.register(CheckoutFooterView.nib, forHeaderFooterViewReuseIdentifier: CheckoutFooterView.reuseIdentifier)
-        tableView.reloadData()
+        refreshUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(CartViewController.refreshUI), name: NSNotification.Name.CartUpdated, object: nil)
     }
     
-    func refreshUI() {
+    @objc func refreshUI() {
         tableView.reloadData()
         enableCheckoutButton(enable: CartManager.sharedInstance().cartItems().count > 0)
     }

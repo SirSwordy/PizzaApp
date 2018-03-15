@@ -6,6 +6,11 @@
 //  Copyright © 2018 Sebastian Vancea. All rights reserved.
 //
 
+import Foundation
+
+extension Notification.Name {
+    static let CartUpdated = Notification.Name("CartUpdatedNotification")
+}
 
 struct Constants {
     
@@ -43,6 +48,10 @@ struct Constants {
             static let OpenPiza = "OpenPizzaSegueIdentifier"
             static let CreatePiza = "CreatePizzaSegueIdentifier"
         }
+    }
+    
+    struct Notifications {
+        static let CartUpdatedNotification = "CarCartUpdatedNotificationt"
     }
 }
 

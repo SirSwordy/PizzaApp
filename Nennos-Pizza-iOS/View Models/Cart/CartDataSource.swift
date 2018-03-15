@@ -18,7 +18,14 @@ class CartDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: GenericItemTableViewCell.cellIdentifier, for: indexPath) as! GenericItemTableViewCell
         cell.selectionStyle = .none
         cell.configure(with: CartManager.sharedInstance().cartItems()[indexPath.row])
+        cell.actionButton.tag = indexPath.row
+        cell.cellDelegate = self
         return cell
     }
+}
 
+extension CartDataSource: GenericCellDelegate {
+    func didPressButton(tag: Int) {
+        CartManager.sharedInstance().removeFromCart(item: CartManager.sharedInstance().cartItems()[tag])
+    }
 }

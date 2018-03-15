@@ -17,6 +17,7 @@ class CartManager: NSObject {
     
     private var sessionManager: SessionManager
     private var cart: [CartItem]
+    private var addedToCartView: UIView!
     var totalPrice: Double {
         return cart.map{ $0.price }.reduce(0, +)
     }
@@ -31,11 +32,26 @@ class CartManager: NSObject {
     init(sessionManager: SessionManager = SessionManager.default) {
         self.sessionManager = sessionManager
         cart = []
+        super.init()
+        if let addedToCartView = Bundle.main.loadNibNamed("AddedToCartView", owner: self, options: nil)?[0] as? UIView {
+            UIApplication.shared.statusBarView?.addSubview(addedToCartView)
+            addedToCartView.moveAboveTop()
+            self.addedToCartView = addedToCartView
+        }
     }
 
     //TODO: Should not be able to add incomplete pizzas to cart?
     func addToCart(item: CartItem) {
         cart.append(item)
+        UIView.animate(withDuration: 0.25) {
+            self.addedToCartView.moveToTop()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            UIView.animate(withDuration: 0.25) {
+                self.addedToCartView.moveAboveTop()
+            }
+        }
+        NotificationCenter.default.post(name: Notification.Name.CartUpdated, object: nil)
     }
     
     func removeFromCart(item: CartItem) {
@@ -44,10 +60,12 @@ class CartManager: NSObject {
             cart.remove(at: i)
             break
         }
+        NotificationCenter.default.post(name: Notification.Name.CartUpdated, object: nil)
     }
     
     func emptyCart() {
         cart.removeAll()
+        NotificationCenter.default.post(name: Notification.Name.CartUpdated, object: nil)
     }
     
     func cartItems() -> [CartItem] {
@@ -60,6 +78,15 @@ class CartManager: NSObject {
     
     func drinks() -> [Drink] {
         return cart.filter{ $0 is Drink } as! [Drink]
+    }
+    
+    //TODO: If project scope grows larger then use CoreData, otherwise NSCoding
+    func saveCart() {
+        
+    }
+    
+    func loadCart() {
+        
     }
 }
 

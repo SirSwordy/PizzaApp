@@ -12,7 +12,7 @@ protocol PizzaManagerProtocol {
     func save(pizzas: [Pizza])
     func save(pizzas: [Pizza], updateIngredients ingredients: [Ingredient])
     func pizzas() -> [Pizza]
-    func getPizzas(completionHandler: @escaping (_ drinks: [Pizza]?, _ error: BackendError?) -> Void)
+    func getPizzas(completionHandler: @escaping (_ pizzas: [Pizza]?, _ error: BackendError?) -> Void)
 }
 
 extension PizzaManagerProtocol {
@@ -47,7 +47,7 @@ class PizzaManager: NSObject {
 }
 
 extension PizzaManager: PizzaManagerProtocol {
-    func getPizzas(completionHandler: @escaping (_ drinks: [Pizza]?, _ error: BackendError?) -> Void) {
+    func getPizzas(completionHandler: @escaping (_ pizzas: [Pizza]?, _ error: BackendError?) -> Void) {
         _ = PizzaRemoteRepository.getPizzas(sessionManager: sessionManager, completionHandler: completionHandler)
     }
 }
@@ -66,7 +66,7 @@ extension MockPizzaManager: PizzaManagerProtocol {
         return savedPizzas
     }
     
-    func getPizzas(completionHandler: @escaping (_ drinks: [Pizza]?, _ error: BackendError?) -> Void) {
+    func getPizzas(completionHandler: @escaping (_ pizzas: [Pizza]?, _ error: BackendError?) -> Void) {
         let pizza1 = Pizza(name: "Pizza 1", ingredientIds: [1, 2], imageUrl: nil, basePrice: 7)
         let pizza2 = Pizza(name: "Pizza 2", ingredientIds: [4, 2], imageUrl: nil, basePrice: 6)
         completionHandler([pizza1, pizza2], nil)

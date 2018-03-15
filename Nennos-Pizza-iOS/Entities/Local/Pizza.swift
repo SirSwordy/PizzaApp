@@ -9,7 +9,7 @@
 import SwiftyJSON
 
 struct Pizza: CartItem {
-    let name: String
+    var name: String
     let ingredientIds: [Int]
     let imageUrl: String?
     var url: URL? {
@@ -29,6 +29,7 @@ struct Pizza: CartItem {
         let price = ingredients.map{ $0.price }.reduce(basePrice, +)
         return price
     }
+    fileprivate var nameWasEdited = false
     
     init(name: String, ingredientIds: [Int], imageUrl: String? = nil, basePrice: Double, ingredients: [Ingredient] = []) {
         self.name = name
@@ -56,15 +57,36 @@ struct Pizza: CartItem {
         self.ingredients = ingredients
     }
     
-    func asParameters() -> [String: Any] {
-        var dictionary = [String: Any]()
-        dictionary[Constants.Params.name] = name
-        dictionary[Constants.Params.ingredients] = ingredients.map{ $0.id }
-        dictionary[Constants.Params.imageUrl] = imageUrl
-        return dictionary
+    func contains(ingredient: Ingredient) -> Bool {
+        return ingredients.filter { $0 == ingredient }.count == 1
+    }
+    
+    mutating func updateWith(ingredient: Ingredient) {
+        if contains(ingredient: ingredient) {
+            remove(ingredient: ingredient)
+        } else {
+            add(ingredient: ingredient)
+        }
+        if !nameWasEdited {
+            nameWasEdited = true
+            let newName = "Custom " + name
+            name = newName
+        }
+    }
+    
+    mutating func add(ingredient: Ingredient) {
+        ingredients.append(ingredient)
+    }
+    
+    mutating func remove(ingredient: Ingredient) {
+        for i in ingredients.indices where ingredients[i] == ingredient {
+            ingredients.remove(at: i)
+            break
+        }
     }
 }
 
+// MARK:- Serializable
 extension Pizza: Serializable {
     init?(json: JSON) {
         self.init(json: json, basePrice: 0)
@@ -84,6 +106,18 @@ extension Pizza: Serializable {
     }
 }
 
+// MARK:- Remote
+extension Pizza {
+    func asParameters() -> [String: Any] {
+        var dictionary = [String: Any]()
+        dictionary[Constants.Params.name] = name
+        dictionary[Constants.Params.ingredients] = ingredients.map{ $0.id }
+        dictionary[Constants.Params.imageUrl] = imageUrl
+        return dictionary
+    }
+}
+
+// MARK:- Equatable
 extension Pizza: Equatable {
     static func ==(lhs: Pizza, rhs: Pizza) -> Bool {
         return lhs.name == rhs.name &&

@@ -145,7 +145,7 @@
                                 <segue destination="Oge-Jk-kT1" kind="show" id="83L-sX-EoS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="d2T-vY-6f7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d2T-vY-6f7">
                             <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                             <connections>
                                 <segue destination="bA0-57-PXm" kind="show" identifier="CreatePizzaSegueIdentifier" id="Pxh-e3-COX"/>
