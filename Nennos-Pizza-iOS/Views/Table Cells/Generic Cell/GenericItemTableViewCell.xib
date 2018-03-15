@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="KGk-i7-Jjw" customClass="GenericItemTableViewCell" customModule="Nennos_Pizza_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-4f-whI">
+                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bg8-4f-whI" secondAttribute="height" id="W1O-gu-g2Z"/>
+                        </constraints>
+                        <color key="tintColor" name="NennoRedColor"/>
+                        <state key="normal" image="sample_checkmark"/>
+                        <connections>
+                            <action selector="onButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iUr-0n-9OS"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coke" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-ER-Ga2">
+                        <rect key="frame" x="43.5" y="12" width="197" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="NennoBlackColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myN-3x-ofu">
+                        <rect key="frame" x="250.5" y="12" width="112.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="NennoBlackColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zbo-ER-Ga2" firstAttribute="leading" secondItem="bg8-4f-whI" secondAttribute="trailing" id="JYg-cX-5xz"/>
+                    <constraint firstItem="myN-3x-ofu" firstAttribute="leading" secondItem="Zbo-ER-Ga2" secondAttribute="trailing" constant="10" id="KP6-QZ-SsB"/>
+                    <constraint firstItem="myN-3x-ofu" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="RFK-de-wc0"/>
+                    <constraint firstItem="myN-3x-ofu" firstAttribute="centerY" secondItem="Zbo-ER-Ga2" secondAttribute="centerY" id="ZJb-wW-3mT"/>
+                    <constraint firstItem="Zbo-ER-Ga2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="edz-NW-deW"/>
+                    <constraint firstItem="bg8-4f-whI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gn6-6d-r3E"/>
+                    <constraint firstItem="bg8-4f-whI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="huD-Lw-eHs"/>
+                    <constraint firstAttribute="trailing" secondItem="myN-3x-ofu" secondAttribute="trailing" constant="12" id="ove-BD-1N5"/>
+                    <constraint firstAttribute="bottom" secondItem="bg8-4f-whI" secondAttribute="bottom" id="rdg-Ql-vJe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="actionButton" destination="bg8-4f-whI" id="pQh-jM-0pa"/>
+                <outlet property="nameLabel" destination="Zbo-ER-Ga2" id="foQ-p5-ed1"/>
+                <outlet property="priceLabel" destination="myN-3x-ofu" id="KgQ-3D-92i"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="38"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sample_checkmark" width="14" height="11"/>
+        <namedColor name="NennoBlackColor">
+            <color red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NennoRedColor">
+            <color red="0.88235294117647056" green="0.30196078431372547" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
