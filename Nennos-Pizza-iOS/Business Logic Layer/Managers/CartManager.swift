@@ -8,7 +8,7 @@
 
 import Alamofire
 
-protocol CartItem {
+protocol CartItem: PropertyListReadable {
     var name: String { get }
     var price: Double { get }
 }
@@ -16,6 +16,8 @@ protocol CartItem {
 class CartManager: NSObject {
     
     private var sessionManager: SessionManager
+    private var pizzaRepository: PizzaLocalRepository
+    private var drinkRepository: DrinkLocalRepository
     private var cart: [CartItem]
     private var addedToCartView: UIView!
     var totalPrice: Double {
@@ -29,8 +31,11 @@ class CartManager: NSObject {
         return Singleton._CartManager
     }
     
-    init(sessionManager: SessionManager = SessionManager.default) {
+    init(sessionManager: SessionManager = SessionManager.default, pizzaRepository: PizzaLocalRepository = PizzaLocalRepository(), drinkRepository: DrinkLocalRepository = DrinkLocalRepository())
+    {
         self.sessionManager = sessionManager
+        self.pizzaRepository = pizzaRepository
+        self.drinkRepository = drinkRepository
         cart = []
         super.init()
         if let addedToCartView = Bundle.main.loadNibNamed("AddedToCartView", owner: self, options: nil)?[0] as? UIView {
@@ -39,7 +44,18 @@ class CartManager: NSObject {
             self.addedToCartView = addedToCartView
         }
     }
+    
+    private func pizzas() -> [Pizza] {
+        return cart.filter{ $0 is Pizza } as! [Pizza]
+    }
+    
+    private func drinks() -> [Drink] {
+        return cart.filter{ $0 is Drink } as! [Drink]
+    }
+}
 
+// MARK:- Cart Manipulation
+extension CartManager {
     //TODO: Should not be able to add incomplete pizzas to cart?
     func addToCart(item: CartItem) {
         cart.append(item)
@@ -71,22 +87,25 @@ class CartManager: NSObject {
     func cartItems() -> [CartItem] {
         return cart
     }
-    
-    func pizzas() -> [Pizza] {
-        return cart.filter{ $0 is Pizza } as! [Pizza]
-    }
-    
-    func drinks() -> [Drink] {
-        return cart.filter{ $0 is Drink } as! [Drink]
-    }
-    
-    //TODO: If project scope grows larger then use CoreData, otherwise NSCoding
+}
+
+// MARK:- Cart Saving
+extension CartManager {
+    //TODO: If project scope grows larger then migrate towards CoreData, otherwise UserDefaults is an ok fit.
     func saveCart() {
-        
+        pizzaRepository.savePizzas(pizzas: pizzas())
+        drinkRepository.saveDrinks(drinks: drinks())
     }
     
     func loadCart() {
-        
+        let pizzas = pizzaRepository.savedPizzas()
+        for p in pizzas {
+            addToCart(item: p)
+        }
+        let drinks = drinkRepository.savedDrinks()
+        for d in drinks {
+            addToCart(item: d)
+        }
     }
 }
 

@@ -22,6 +22,11 @@
 		96532492205AAFE9008D7C10 /* CartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96532491205AAFE9008D7C10 /* CartDataSource.swift */; };
 		96532494205AB7A6008D7C10 /* CartRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96532493205AB7A6008D7C10 /* CartRemoteRepository.swift */; };
 		96532498205ACA9E008D7C10 /* AddedToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96532497205ACA9E008D7C10 /* AddedToCartView.xib */; };
+		9653249C205AFBD0008D7C10 /* DrinkLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9653249B205AFBD0008D7C10 /* DrinkLocalRepository.swift */; };
+		9653249E205AFD51008D7C10 /* DrinkLocalRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9653249D205AFD51008D7C10 /* DrinkLocalRepositoryTests.swift */; };
+		965324A0205AFE1F008D7C10 /* PropertyListReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9653249F205AFE1F008D7C10 /* PropertyListReadable.swift */; };
+		965324A2205B0153008D7C10 /* PizzaLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965324A1205B0153008D7C10 /* PizzaLocalRepository.swift */; };
+		965324A4205B0234008D7C10 /* PizzaLocalRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965324A3205B0234008D7C10 /* PizzaLocalRepositoryTests.swift */; };
 		96A5DF402057246D00627FB3 /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5DF3F2057246D00627FB3 /* PizzaTableViewCell.swift */; };
 		96A5DF422057274900627FB3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5DF412057274900627FB3 /* CartViewController.swift */; };
 		96A5DF472057418900627FB3 /* CheckoutFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5DF462057418900627FB3 /* CheckoutFooterView.swift */; };
@@ -102,6 +107,11 @@
 		96532491205AAFE9008D7C10 /* CartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSource.swift; sourceTree = "<group>"; };
 		96532493205AB7A6008D7C10 /* CartRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRemoteRepository.swift; sourceTree = "<group>"; };
 		96532497205ACA9E008D7C10 /* AddedToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddedToCartView.xib; sourceTree = "<group>"; };
+		9653249B205AFBD0008D7C10 /* DrinkLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkLocalRepository.swift; sourceTree = "<group>"; };
+		9653249D205AFD51008D7C10 /* DrinkLocalRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkLocalRepositoryTests.swift; sourceTree = "<group>"; };
+		9653249F205AFE1F008D7C10 /* PropertyListReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListReadable.swift; sourceTree = "<group>"; };
+		965324A1205B0153008D7C10 /* PizzaLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLocalRepository.swift; sourceTree = "<group>"; };
+		965324A3205B0234008D7C10 /* PizzaLocalRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLocalRepositoryTests.swift; sourceTree = "<group>"; };
 		96A5DF3F2057246D00627FB3 /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
 		96A5DF412057274900627FB3 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		96A5DF462057418900627FB3 /* CheckoutFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFooterView.swift; sourceTree = "<group>"; };
@@ -225,6 +235,16 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		96532499205AFBB2008D7C10 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9653249B205AFBD0008D7C10 /* DrinkLocalRepository.swift */,
+				9653249F205AFE1F008D7C10 /* PropertyListReadable.swift */,
+				965324A1205B0153008D7C10 /* PizzaLocalRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		96A5DF3E2057242B00627FB3 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +327,8 @@
 				96BFB9982059E0C600065F9A /* MenuViewControllerTests.swift */,
 				96DDF07D205A7632007B14C0 /* PizzaManagerTests.swift */,
 				9653248C205AAC41008D7C10 /* CartManagerTests.swift */,
+				9653249D205AFD51008D7C10 /* DrinkLocalRepositoryTests.swift */,
+				965324A3205B0234008D7C10 /* PizzaLocalRepositoryTests.swift */,
 				96C4AD0F20597E4100E1AEF8 /* Nennos-Pizza-iOSTests-Bridging-Header.h */,
 			);
 			path = "Nennos-Pizza-iOSTests";
@@ -444,6 +466,7 @@
 		96AE4C77205714D900266D34 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				96532499205AFBB2008D7C10 /* Repositories */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -781,12 +804,14 @@
 				96A5DF472057418900627FB3 /* CheckoutFooterView.swift in Sources */,
 				96532489205AA5A6008D7C10 /* DrinksDataSource.swift in Sources */,
 				96B87F0B2059A69300787CA5 /* Serializable.swift in Sources */,
+				965324A2205B0153008D7C10 /* PizzaLocalRepository.swift in Sources */,
 				96B87F2B2059CD2400787CA5 /* DrinkManager.swift in Sources */,
 				96AE4C302055DAA100266D34 /* AppDelegate.swift in Sources */,
 				96B87F112059ACF900787CA5 /* Pizza.swift in Sources */,
 				96A5DF422057274900627FB3 /* CartViewController.swift in Sources */,
 				96BFB9952059DD8A00065F9A /* MenuViewModel.swift in Sources */,
 				9653248B205AA9B3008D7C10 /* CartManager.swift in Sources */,
+				9653249C205AFBD0008D7C10 /* DrinkLocalRepository.swift in Sources */,
 				96B87F132059B54400787CA5 /* DrinkRemoteRepository.swift in Sources */,
 				96532492205AAFE9008D7C10 /* CartDataSource.swift in Sources */,
 				96B87F1A2059BF7000787CA5 /* Router.swift in Sources */,
@@ -800,6 +825,7 @@
 				96AE4C89205716AD00266D34 /* MenuViewController.swift in Sources */,
 				96B87F1C2059C16A00787CA5 /* Constants.swift in Sources */,
 				96BFB9912059DC6E00065F9A /* IngredientManager.swift in Sources */,
+				965324A0205AFE1F008D7C10 /* PropertyListReadable.swift in Sources */,
 				96532479205A93FA008D7C10 /* LeftAlignedIconButton.swift in Sources */,
 				96532482205A9A93008D7C10 /* PizzaDetailDataSource.swift in Sources */,
 				96BFB9932059DC7500065F9A /* PizzaManager.swift in Sources */,
@@ -814,7 +840,9 @@
 			files = (
 				96B87F1E2059C48200787CA5 /* RouterTests.swift in Sources */,
 				9653248D205AAC41008D7C10 /* CartManagerTests.swift in Sources */,
+				9653249E205AFD51008D7C10 /* DrinkLocalRepositoryTests.swift in Sources */,
 				96C4AD1E2059969A00E1AEF8 /* IngredientsTests.swift in Sources */,
+				965324A4205B0234008D7C10 /* PizzaLocalRepositoryTests.swift in Sources */,
 				96BFB9972059DEE100065F9A /* MenuViewModelTests.swift in Sources */,
 				96BFB9992059E0C600065F9A /* MenuViewControllerTests.swift in Sources */,
 				96C4AD1120597E4200E1AEF8 /* DrinksTests.swift in Sources */,

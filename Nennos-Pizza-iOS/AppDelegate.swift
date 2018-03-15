@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        CartManager.sharedInstance().loadCart()
+//        CartManager.sharedInstance().loadCart()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

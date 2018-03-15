@@ -86,6 +86,37 @@ struct Pizza: CartItem {
     }
 }
 
+// MARK:- Coding
+extension Pizza: PropertyListReadable {
+    func propertyListRepresentation() -> NSDictionary {
+        var representation: [String: AnyObject] = ["name": self.name as AnyObject,
+                                                   "ingredientIds": self.ingredientIds as AnyObject,
+                                                   "basePrice": self.basePrice as AnyObject,
+                                                   "ingredients": self.ingredients.map{ $0.propertyListRepresentation() } as AnyObject]
+        if let imageUrl = self.imageUrl {
+            representation["imageUrl"] = imageUrl as AnyObject
+        }
+        return representation as NSDictionary
+    }
+    
+    init?(propertyListRepresentation: NSDictionary?) {
+        guard let values = propertyListRepresentation else { return nil }
+        if let name = values["name"] as? String,
+            let ingredientIds = values["ingredientIds"] as? [Int],
+            let basePrice = values["basePrice"] as? Double,
+            let ingredients = values["ingredients"] as? [NSDictionary]
+        {
+            self.name = name
+            self.ingredientIds = ingredientIds
+            self.basePrice = basePrice
+            self.ingredients = Ingredient.extractValuesFromPropertyListArray(propertyListArray: ingredients)
+            self.imageUrl = values["imageUrl"] as? String
+        } else {
+            return nil
+        }
+    }
+}
+
 // MARK:- Serializable
 extension Pizza: Serializable {
     init?(json: JSON) {
